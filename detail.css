@@ -1,0 +1,30 @@
+.detail-content{
+	padding:50px 0px;
+}
+.detail-title{
+	font-size: 30px;
+	font-weight: 600;
+}
+.detail-option{
+	margin-top: 50px;
+}
+.detail-option:nth-of-type(1){
+	margin-top: 20px;
+}
+.detail-text{
+	font-size: 16px;
+	color:#999;
+	margin-top: 10px;
+}
+.detail-list{
+ margin-top: 20px;
+ padding-bottom: 30px;
+ border-bottom: 1px solid #f2f2f2;
+ font-size: 16px;
+ color:#333;
+}
+.detail-list-title{
+	font-size: 22px;
+	color:#999;
+	margin-bottom: 10px;
+}

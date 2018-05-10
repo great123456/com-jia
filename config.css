@@ -47,6 +47,10 @@ a{
 	line-height: 72px;
 	float: left;
 	margin-left: 10px;
+	cursor: pointer;
+}
+.logo-title a{
+   color:#333;
 }
 .header-logo{
 	float:right;
