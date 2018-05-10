@@ -8,6 +8,7 @@
     <link href="./config.css" rel="stylesheet" media="screen" />
     <link href="./detail.css" rel="stylesheet" media="screen" />
     <link rel="stylesheet" href="./swiper/swiper.min.css">
+    <script src="jquery.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="header">
@@ -53,7 +54,7 @@
     		</div>
     		<div class="detail-option">
     			<p class="detail-title">详细介绍</p>
-    			<p class="detail-text">
+    			<p class="detail-text detail-center">
     				卧室里均配备有空调。客厅里有沙发和电视机，在闲暇之余坐在客厅里和家人朋友聊聊天看看电视甚是惬意。厨房间里有灶台，锅碗瓢盆一一俱全，在公寓门口的菜市场买点菜即可做出美味的饭菜，卫生间里干净整洁，没有异味。我们房间里的卫生都是专门保洁阿姨来进行打扫，一客一换，被单被罩都是进行过高温消毒，请放心使用，另外一次性牙刷牙膏洗发露沐浴露毛巾浴巾吹风机均有配备，小阳台上还有洗衣机，都是免费使用。小区门口有卖早点，另外各式各样的饭店齐全，晚上还有烧烤，和朋友在一起喝点啤酒吃点烧烤很是悠哉，大小型超市均有，药店之类也都有。另外我们提供机场或者火车站免费接，迪士尼提供免费接送，野生动物园提供免费接送，如果你们退房后是去市区我们可以把你们免费送到我们小区最近的地铁站。在入住期间如果你们想去地铁站我们也是提供附近最近的地铁站免费接送，我们就希望你们在迪士尼或者野生动物园玩的开心，在我们这里住的舒心，另外我还有很多其他迪士尼主题的房子，也可以代购迪士尼优惠门票，我在上海期待着你们的入住。
     			</p>
     		</div>
@@ -84,6 +85,19 @@
     	</div>
     </div>
 
+   <div id="reserve">
+   	 <p class="reserve-price">￥169/天</p>
+   	 <div class="reserve-number">
+   	 	<p>
+   	 		<span>入住人数</span>
+   	 		<span class="reserve-reduce">-</span>
+   	 		<span class="reserve-num">1</span>
+   	 		<span class="reserve-add">+</span>
+   	 	</p>
+   	 	<p class="reserve-number-text">可住5人，可加客2人，另外收取100元/人</p>
+   	 </div>
+   	 <p class="reserve-btn">立即预定</p>
+   </div>
 
    <div class="bottom">
       <div class="center">
@@ -107,3 +121,28 @@
   </script>	
 </body>
 </html>
+<script>
+	$(window).scroll(function () {
+		var scrollY = $(window).scrollTop();
+		$("#reserve").css("top",690-scrollY+'px')
+		if(scrollY>=500){
+          $("#reserve").css("top",0+'px');
+		}
+		if(scrollY<=100){
+          $("#reserve").css("top",690+'px');
+		}
+	});
+
+	$(".reserve-add").click(function(){
+		var num = $(".reserve-num").html();
+		$(".reserve-num").html(parseInt(num)+1);
+	})
+
+	$(".reserve-reduce").click(function(){
+		var num = $(".reserve-num").html();
+		if(parseInt(num) <= 1){
+           num = 2;
+		};
+		$(".reserve-num").html(parseInt(num)-1);
+	})
+</script>

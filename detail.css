@@ -1,6 +1,9 @@
 .detail-content{
 	padding:50px 0px;
 }
+.detail-center{
+	width:60%;
+}
 .detail-title{
 	font-size: 30px;
 	font-weight: 600;
@@ -27,4 +30,55 @@
 	font-size: 22px;
 	color:#999;
 	margin-bottom: 10px;
+}
+#reserve{
+	width:310px;
+	height:360px;
+	background: #ffffff;
+	position: fixed;
+	right:22%;
+	top:690px;
+	z-index: 9;
+	border:1px solid #d6d6d6;
+}
+.reserve-price{
+	height:50px;
+	line-height: 50px;
+	color:#ffffff;
+	font-size: 23px;
+	background-color: rgba(78,78,78,.9);
+}
+.reserve-btn{
+	width:90%;
+	height:60px;
+	line-height: 60px;
+	color:#ffffff;
+	font-size: 26px;
+	text-align: center;
+	background: #38f;
+	margin: 30px auto;
+	cursor: pointer;
+}
+.reserve-number{
+	padding: 20px 15px;
+	font-size: 20px;
+}
+.reserve-number-text{
+	font-size: 15px;
+	margin-top: 10px;
+	color:#999;
+}
+.reserve-reduce{
+	display: inline-block;
+	margin-left: 20px;
+	font-size: 32px;
+	cursor: pointer;
+	margin-right: 5px;
+}
+.reserve-add{
+	font-size: 30px;
+	cursor: pointer;
+}
+.reserve-num{
+	font-size: 30px;
 }
