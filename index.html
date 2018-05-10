@@ -3,9 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>家度民宿</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
     <link href="./config.css" rel="stylesheet" media="screen" />
     <link href="./index.css" rel="stylesheet" media="screen" />
+    <link rel="stylesheet" href="./swiper/swiper.min.css">
+<style>
+ html, body {
+      position: relative;
+      height: 100%;
+    }
+ .swiper-slide {
+      text-align: center;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }   
+</style>
 </head>
 <body>
 	<div class="header">
@@ -15,15 +39,22 @@
 			</div>
 			<p class="logo-title">家度社区</p>
 			<ul class="header-logo">
-				<li style="margin-left: 10px;">成为房东</li>
-				<li>登录/注册</li>
+				<!-- <li style="margin-left: 10px;"><a href="owner.html">成为房东</a></li> -->
+				<li><a href="login.html">登录/注册</a></li>
 			</ul>
 		</div>
 	</div>
-
-	<div class="banner">
-		<img src="./image/banner.png" alt="">
-	</div>
+    
+    <div class="swiper-container">
+	    <div class="swiper-wrapper">
+	      <div class="swiper-slide"><img src="./image/banner.png" alt=""></div>
+	      <div class="swiper-slide"><img src="./image/banner.png" alt=""></div>
+	      <div class="swiper-slide"><img src="./image/banner.png" alt=""></div>
+	    </div>
+	    <div class="swiper-button-next"></div>
+	    <div class="swiper-button-prev"></div>
+	    <div class="swiper-pagination"></div>
+    </div>
     
     <div class="option">
     	<div class="center">
@@ -140,13 +171,26 @@
       <div class="center">
       	<div class="bottom-service">
       		<p class="bottom-title">人工客服</p>
-      		<p>400-0660-190</p>
+      		<p style="margin-top: 20px;font-size: 22px;">400-0660-190</p>
       	</div>
       	<div class="bottom-code">
       		<img src="./image/code.jpg" alt="">
-      		<p>关注家度民宿微信号</p>
+      		<p style="margin-top: 10px;">关注家度民宿微信号</p>
       	</div>
       </div>
     </div>
+
+<script src="./swiper/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
 </body>
 </html>

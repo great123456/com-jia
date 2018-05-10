@@ -56,13 +56,23 @@ a{
 .header-logo li{
 	float:right;
 	cursor: pointer;
+	height:72px;
 	padding:0px 10px;
+	box-sizing: border-box;
 }
 .header-logo li:hover{
   border-bottom: 3px solid #38f;
   background: rgba(0,0,0,0.1);
 }
+.header-logo a{
+	color:#333;
+}
 .banner img{
+  width:100%;
+  height:auto;
+  cursor: pointer;
+}
+.swiper-container img{
   width:100%;
   height:auto;
   cursor: pointer;
